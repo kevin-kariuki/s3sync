@@ -97,6 +97,7 @@ func (st *S3Storage) List(output chan<- *storage.Object) error {
 			key, _ := url.QueryUnescape(aws.StringValue(o.Key))
 			key = strings.Replace(key, st.prefix, "", 1)
 			key = strings.TrimPrefix(key, "/")
+			storage.Log.Debugf("Object size: %d", *o.Size)
 			output <- &storage.Object{
 				Key:          &key,
 				ETag:         storage.StrongEtag(o.ETag),
