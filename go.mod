@@ -13,5 +13,5 @@ require (
 	github.com/pkg/xattr v0.4.1
 	github.com/sirupsen/logrus v1.4.2
 	golang.org/x/net v0.0.0-20190724013045-ca1201d0de80 // indirect
-	golang.org/x/sys v0.0.0-20190904154756-749cb33beabd // indirect
+	golang.org/x/sys v0.1.0 // indirect
 )
